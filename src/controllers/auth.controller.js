@@ -61,3 +61,8 @@ export const logout = (register, res) => {
   res.cookie("token", "", { expires: new Date(0) });
   return res.sendStatus(200);
 };
+
+export const profile = (req, res) => {
+  console.log(req.user);
+  res.send("profile");
+};
